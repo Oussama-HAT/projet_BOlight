@@ -1,0 +1,270 @@
+
+
+.nav-link-name {
+    font-size: large;
+
+}
+/*
+.preloader {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+}
+
+.preloader span {
+    text-transform: none;
+    font-size: 34px
+}
+
+.preloader .preloader-img {
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+}
+
+
+
+.content{
+    display: none;
+
+}
+.preloader{
+    background-color:black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+}
+
+.preloader > div
+{  
+    
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+   
+
+
+}
+
+*/
+
+
+/*
+.home .carousel-item{
+
+
+    min-height: 100vh;
+    background-position:center ;
+    background-size: cover;
+}
+.home .carousel-item .container{
+
+    position: absolute;
+    background: darkgrey;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+*/
+
+.carousel-item{
+    max-height:800px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.carousel-item:before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+
+
+
+
+.carousel-item .container{
+	position: absolute;
+	left: 25%;
+	top:25%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+    background-color:white;
+    
+    
+
+}
+
+.carousel-item h2{
+	font-size: 80px;
+	color: #000;
+	margin:0 0 10px;
+	opacity: 0;
+}
+.carousel-item p{
+	font-size: 30px;
+	margin:0;
+	color: #000;
+	opacity: 0;
+ }
+ .carousel-item.active h2{
+	animation: fadeInLeft 0.5s ease forwards;
+}
+.carousel-item.active p{
+	animation: fadeInRight 0.5s ease forwards;
+}
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+#hero{
+
+    position:relative;
+
+
+
+}
+
+#hero video{
+
+    height:80%;
+    width:100%;
+    background-position:absolute;
+    z-index: 10 ;
+    object-fit:fill;
+}
+#desc_product{
+
+    background-color:rgba(227,226,231,0.2);
+    
+
+
+}
+.m-temperature{
+
+    display: flex;
+    position: relative;
+    height: 1rem;
+    margin-top: 8px;
+    border-radius: 1.5rem;
+    background-image: linear-gradient(to right,#ff1800 0%,#ffb700 17%,#fefc6a 39%,#daffea 60%,#aafeff 80%,#73d6ff 100%);
+    width:250px ;
+    
+
+}
+.m-temperature > div {
+
+    position: absolute;
+    top: 1px;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: rotate(-270deg);
+    box-shadow: 2px 0 6px -2px rgb(0 0 0 / 50%);
+    background-color: #fff;
+    border-radius: 100%;
+}
+#home-tab {
+    font: 1.3rem 'Roboto', sans-serif;
+    text-transform: uppercase;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid #000;
+    border-radius: 99rem;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    opacity:0.5;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#profile-tab {
+    font: 1.3rem 'Roboto', sans-serif;
+    text-transform: uppercase;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid #000;
+    border-radius: 99rem;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    opacity:0.5;
+    cursor: pointer;
+    transition: .3s ease;
+}
+/*
+@media only screen and(max-width:800px){
+    #no-more-tables tbody,
+    #no-more-tables tr,
+    #no-more-tables td { 
+        display : block;
+    }
+}
+*/
+
+.offcanvas-body ul li{ 
+    list-style:none;
+    margin-bottom:30px;
+}
+.offcanvas-body ul li:last-child{
+    margin-bottom:0;
+
+}
+
+.offcanvas-body ul li{
+    
+   text-decoration:none;
+   display:block;
+   color:#111;
+   font-size:15px;
+   font-weight:400;
+    line-height:0;
+    transition: all .4s ease;
+     }
+.offcanvas-body ul li a:hover{
+    opacity: 50%;
+    background-color: #fff;
+     }
