@@ -122,7 +122,7 @@
 .container{
     position: relative;
     min-height: 100vh;
-    max-width: 1000px;
+    max-width: 1700px;
     width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
@@ -148,7 +148,7 @@
 .search-box i{
     position: absolute;
     z-index: 2;
-    color: #999;
+    color: rgb(255, 255, 255);
     top: 50%;
     left: 15px;
     font-size: 20px;
@@ -156,19 +156,26 @@
 }
 .container .images .image-box{
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     border-radius: 6px;
     overflow: hidden;
 }
 .images{
-    width: 100%;
-    display: flex;
+    width:100%;
+    display:flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 .images .image-box{
     margin: 8px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 10%);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    color: #000;
+
+}
+.image-box:hover{
+  box-shadow:  3px 3px 3px 3px rgb(0 0 0 / 12%), 3px 3px 3px 3px rgb(0 0 0 / 10%);
 }
 .images .image-box img{
     height: 100%;
@@ -181,10 +188,14 @@
 }
 .image-box h6{
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: rgb(133, 133, 133);
-    font-size: 20px;
+    bottom: 5px;
+    left: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
     font-weight: 400;
     text-transform: capitalize;
+ 
 }
+
+
+
