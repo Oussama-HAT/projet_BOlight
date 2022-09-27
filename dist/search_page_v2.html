@@ -23,8 +23,8 @@
         <!-- Themebau -->
         <link rel="stylesheet" href="assets/css/themebau.min.css">
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="assets/css/custom.css">
-        <link rel="stylesheet" href="assets/css/style_search_page.css">
+       
+        <link rel="stylesheet" href="assets/css/css_search_page_v2.css">
         <!-- Swiper: Styles -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <!-- jQuery -->
@@ -565,205 +565,53 @@
             </div>
         </div>
 
-           <!--
-            <div class="wrapper">
-              <div id="search-container">
-                <input
-                  type="search"
-                  id="search-input"
-                  placeholder="Search product name here.."
-                />
-                <button id="search">Search</button>
-              </div>
-              <div id="buttons">
-                <button class="button-value" onclick="filterProduct('all')">All</button>
-                <button class="button-value" onclick="filterProduct('Topwear')">
-                  Topwear
-                </button>
-                <button class="button-value" onclick="filterProduct('Bottomwear')">
-                  Bottomwear
-                </button>
-                <button class="button-value" onclick="filterProduct('Jacket')">
-                  Jacket
-                </button>
-                <button class="button-value" onclick="filterProduct('Watch')">
-                  Watch
-                </button>
-              </div>
-              <div id="products"></div>
-            </div>
-            -->
+
         
 
 
-
-    <div class="container">
-        <div class="search-box">
-            <i class="bx bx-search"></i>
-            <input type="text" placeholder="Search a product">
-         
-        </div>
-        <ul class="filter-links nav justify-content-center isotope-options mb-60 show-on-scroll"  data-show-duration="500" >
-            <li class="nav-item active show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="100">
-                <a href="#" data-filter="all" class="nav-link">
-                 all Products
-                </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="150">
-                <a href="#" data-filter="Indoor" class="nav-link">
-                    Indoor
-                </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="200">
-                <a href="#" data-filter="Outdoor" class="nav-link">
-                   Outdoor
-                </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="250">
-                <a href="#" data-filter="Profiles" class="nav-link">
-                   Profiles
-                </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="300">
-                <a href="#" data-filter="Office" class="nav-link">
-                    Office
-                </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="500" data-show-distance="10" data-show-delay="300">
-                <a href="#" data-filter="Technical" class="nav-link">
-                   Technical
-                </a>
-            </li>
-        </ul>
-        <div class="images ">
-            <div class="image-box" data-name="SOFT_FIXED" >
-                <a href="#">
-               <img src="assets/images/catalog_search_product/indoor/ceiling_recessed/SOFT_FIXED_WHITE.jpg" alt="">
-                <h6>SOFT FIXED</h6>
-            </a>
+            <div class="container">
+                <div class="row" id="search">
+                    <form id="search-form" action="" method="POST" enctype="multipart/form-data">
+                        <div class="form-group col-xs-9">
+                            <input class="form-control" type="text" placeholder="Search" />
+                        </div>
+                        <div class="form-group col-xs-3">
+                            <button type="submit" class="btn btn-block btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="row" id="filter">
+                    <form>
+                        <div class="form-group col-sm-3 col-xs-6">
+                            <select data-filter="make" class="filter-make filter form-control">
+                                <option value="">Select Make</option>
+                                <option value="">Show All</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3 col-xs-6">
+                            <select data-filter="model" class="filter-model filter form-control">
+                                <option value="">Select Model</option>
+                                <option value="">Show All</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3 col-xs-6">
+                            <select data-filter="type" class="filter-type filter form-control">
+                                <option value="">Select Type</option>
+                                <option value="">Show All</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-3 col-xs-6">
+                            <select data-filter="price" class="filter-price filter form-control">
+                                <option value="">Select Price Range</option>
+                                <option value="">Show All</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="row" id="products">
+                    
+                </div>
             </div>
-            <div class="image-box " data-name="SOFT_ADJUSTABLE">
-                <a href="#">
-              <img src="images/joker.jpg" alt="">
-                <h6>SOFT ADJUSTABLE</h6>
-                </a>
-            </div>
-            <div class="image-box " data-name="DEEP_RECESSED_WITH_FRAME">
-                <a href="#">
-                <img src="images/ironman.jpg" alt="">
-                <h6>DEEP RECESSED WITH FRAME</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="DEEP_TRIMLESS">
-                <a href="#">
-               <img src="images/passenger.jpg" alt="">
-                <h6>DEEP TRIMLESS</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="FOX_ROUND">
-                <a href="#">
-                <img src="images/space.jpg" alt="">
-                <h6>FOX ROUND</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="FOX_SQUARE">
-                <a href="#">
-                <img src="images/spiderman2.jpg" alt="">
-                <h6>FOX SQUARE</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="REO_WALL_WASHER">
-                <a href="#">
-            <img src="images/universe.jpg" alt="">
-                <h6>REO WALL WASHER</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="MOON_15">
-                <a href="#">
-                <img src="images/spiderman3.jpg" alt="">
-                <h6>MOON 15</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="MOON 22">
-                <a href="#">
-                <img src="images/holiday.jpg" alt="">
-                <h6>MOON_22</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="BOXY 1">
-                <a href="#">
-                <img src="images/ironman2.jpg" alt="">
-                <h6>BOXY_1</h6>
-                </a>
-            </div>
-            <div class="image-box" data-name="BOXY 2">
-                <a href="#">
-                <img src="images/ironman2.jpg" alt="">
-                <h6>BOXY_2</h6>
-                </a>
-            </div>
-            <div class="image-box " data-name="SOFT_ADJUSTABLE">
-                <a href="#">
-                <img src="images/joker.jpg" alt="">
-                  <h6>SOFT ADJUSTABLE</h6>
-                </a>
-              </div>
-              <div class="image-box " data-name="DEEP_RECESSED_WITH_FRAME">
-                <a href="#">
-                  <img src="images/ironman.jpg" alt="">
-                  <h6>DEEP RECESSED WITH FRAME</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="DEEP_TRIMLESS">
-                <a href="#">
-                 <img src="images/passenger.jpg" alt="">
-                  <h6>DEEP TRIMLESS</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="FOX_ROUND">
-                <a href="#">
-                  <img src="images/space.jpg" alt="">
-                  <h6>FOX ROUND</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="FOX_SQUARE">
-                <a href="#">
-                  <img src="images/spiderman2.jpg" alt="">
-                  <h6>FOX SQUARE</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="REO_WALL_WASHER">
-                <a href="#">
-              <img src="images/universe.jpg" alt="">
-                  <h6>REO WALL WASHER</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="MOON_15">
-                <a href="#">
-                  <img src="images/spiderman3.jpg" alt="">
-                  <h6>MOON 15</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="MOON 22">
-                <a href="#">
-                  <img src="images/holiday.jpg" alt="">
-                  <h6>MOON_22</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="BOXY 1">
-                <a href="#">
-                  <img src="images/ironman2.jpg" alt="">
-                  <h6>BOXY_1</h6>
-                </a>
-              </div>
-              <div class="image-box" data-name="BOXY 2">
-                <a href="#">
-                  <img src="images/ironman2.jpg" alt="">
-                  <h6>BOXY_2</h6>
-                </a>
-              </div>
-        </div>
-    </div>
 
 
 
@@ -918,7 +766,7 @@
         <script src="assets/js/bs-init.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <!-- Script -->
-        <script src="assets/js/script.js"></script>
+        <script src="assets/js/js_search_page_v2.js"></script>
   
     </body>
 </html>
