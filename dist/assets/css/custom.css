@@ -277,19 +277,34 @@
  }
 
 
+
+ 
+
+ 
+
+  
+
+  
+
+
+
+
   main {
-    height: 15vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .text {
-    background: url(https://media4.giphy.com/media/h60eh1sGGM2p5SNJvm/giphy.gif?cid=ecf05e47nzuy5kj0zoemd72ennlne43ydagp0nydwg63i6j8&rid=giphy.gif&ct=g);
+    background: url(https://media0.giphy.com/media/Td4BPgayuhUqNtwIP9/200w.webp?cid=ecf05e47w83sk2z6qycxtbttagpua2pwlapbji60fy5ezz94&rid=200w.webp&ct=g);
     background-size: contain;
     background-position: top left;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 15rem;
+    font-size: 8rem;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
+  }
+  .background{
+    background-color:#fff;
   }
